@@ -44,7 +44,7 @@ if parted "/dev/$xda" print | grep '^Partition Table' | grep gpt; then
       preserve: true
       type: partition
       id: partition-os
-    - fstype: ext4
+    - fstype: xfs
       volume: partition-os
       type: format
       id: format-os
@@ -84,7 +84,7 @@ EOF
       preserve: true
       type: partition
       id: partition-os
-    - fstype: ext4
+    - fstype: xfs
       volume: partition-os
       type: format
       id: format-os
@@ -113,7 +113,7 @@ else
       preserve: true
       type: partition
       id: partition-os
-    - fstype: ext4
+    - fstype: xfs
       volume: partition-os
       type: format
       id: format-os
